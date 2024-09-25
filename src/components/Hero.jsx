@@ -24,7 +24,7 @@ export default function Hero() {
         ,Full-Stack Developer
       </h1>
       <p className="mt-4 text-lg text-gray-300 px-4 md:px-32">
-        I speialize in building modern and responsive web application.
+        I specialize in building modern and responsive web application.
       </p>
       <div className="mt-8 space-x-4">
         <button
