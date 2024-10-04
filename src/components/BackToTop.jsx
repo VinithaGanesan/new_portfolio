@@ -25,13 +25,13 @@ const BackToTop = () => {
 
   return (
     visible && (
-      <div className="fixed bottom-8 right-4 z-50">
+      <div className="fixed z-50 bottom-8 right-4">
         <button
           onClick={handleScrollToTop}
-          className="bg-gradient-to-b from-green-400 to-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transform transition-transform duration-300 hover:scale-105 px-4 py-2"
+          className="px-4 py-2 text-white transition-transform duration-300 transform rounded-full shadow-lg bg-gradient-to-b from-green-400 to-blue-500 hover:bg-blue-600 hover:scale-105"
           aria-label="Back to top"
         >
-          ↑
+          Back ↑
         </button>
       </div>
     )

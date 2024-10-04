@@ -2,19 +2,12 @@ import React from "react";
 import Image from "../assets/image.jpg";
 
 export default function Hero() {
-  const handleDownload = () => {
-    saveAs(
-      "https://drive.google.com/file/d/1cTyZ_uVY6F5bZ_8Cc62zUcUbmnC64CVZ/view?usp=drive_link",
-      "My_Resume.pdf"
-    ); // Change to your resume URL
-  };
-
   return (
-    <div className="bg-black text-white text-center py-16" id="hero">
+    <div className="py-16 text-center text-white bg-black" id="hero">
       <img
         src={Image}
         alt=""
-        className="mx-auto mb-8 w-48 h-48 rounded-full object-cover transform transition-transform duration-300 hover:scale-105"
+        className="object-cover w-48 h-48 mx-auto mb-8 transition-transform duration-300 transform rounded-full hover:scale-105"
       />
       <h1 className="text-4xl font-bold">
         I'm{" "}
@@ -23,29 +16,18 @@ export default function Hero() {
         </span>
         ,Full-Stack Developer
       </h1>
-      <p className="mt-4 text-lg text-gray-300 px-4 md:px-32">
+      <p className="px-4 mt-4 text-lg text-gray-300 md:px-32">
         I specialize in building modern and responsive web application.
       </p>
       <div className="mt-8 space-x-4">
-        <button
-          className="bg-gradient-to-r from-green-400 to-blue-500 text-white md:inline 
-        transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
-        >
+        <button className="px-4 py-2 text-white transition-transform duration-300 transform rounded-full bg-gradient-to-r from-green-400 to-blue-500 md:inline hover:scale-105">
           <a href="#contact">Contact With Me</a>
         </button>
-        <button
-          onClick={handleDownload}
-          className="bg-gradient-to-r from-pink-500 to-yellow-500 text-white md:inline 
-        transform transition-transform duration-300 hover:scale-105 px-4 py-2 rounded-full"
-        >
-          <a
-            href="https://drive.google.com/uc?export=download&id=1cTyZ_uVY6F5bZ_8Cc62zUcUbmnC64CVZ"
-            target="_blank"
-            download
-          >
+        <a href="src\assets\VINITHA.pdf" download="vinitha.pdf">
+          <button className="px-4 py-2 text-white transition-transform duration-300 transform rounded-full bg-gradient-to-r from-pink-500 to-yellow-500 md:inline hover:scale-105">
             Download Resume
-          </a>
-        </button>
+          </button>
+        </a>
       </div>
     </div>
   );
