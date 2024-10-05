@@ -25,7 +25,7 @@ export default function Hero() {
         </button>
         <a
           href={`${process.env.VITE_PUBLIC_URL}/VINITHA.pdf`}
-          download="My_Resume.pdf"
+          download="VINITHA.pdf"
         >
           <button className="px-4 py-2 text-white transition-transform duration-300 transform rounded-full bg-gradient-to-r from-pink-500 to-yellow-500 md:inline hover:scale-105">
             Download Resume
