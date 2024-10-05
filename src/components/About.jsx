@@ -3,17 +3,17 @@ import Image from "../assets/image.jpg";
 
 export default function About() {
   return (
-    <div className="bg-black text-white py-20" id="about">
-      <div className="container mx-auto px-8 md:px-16 lg:px-24">
-        <h2 className="text-4xl font-bold text-center mb-12">About Me</h2>
-        <div className="flex flex-col md:flex-row items-center md:space-x-12">
+    <div className="py-20 text-white bg-black" id="about">
+      <div className="container px-8 mx-auto md:px-16 lg:px-24">
+        <h2 className="mb-12 text-4xl font-bold text-center">About Me</h2>
+        <div className="flex flex-col items-center md:flex-row md:space-x-12">
           <img
             src={Image}
             alt=""
-            className="w-72 h-80 rounded object-cover mb-8 md:mb-0"
+            className="object-cover mb-8 rounded w-72 h-80 md:mb-0"
           />
           <div className="flex-1">
-            <p className="text-lg mb-8">
+            <p className="mb-8 text-lg">
               I'm a passionate full-stack developer with a focus on building
               modern and responsive web applications. With a strong foundation
               in both frontend and backend technologies, I strive to create

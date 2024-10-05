@@ -2,6 +2,7 @@ import React from "react";
 import Image from "../assets/image.jpg";
 import resume from "../assets/VINITHA.pdf";
 import { saveAs } from "file-saver";
+import imagePhoto from "../assets/PHOTO.jpg";
 
 export default function Hero() {
   const handleDownload = () => {
@@ -10,7 +11,7 @@ export default function Hero() {
   return (
     <div className="py-16 text-center text-white bg-black" id="hero">
       <img
-        src={Image}
+        src={imagePhoto}
         alt=""
         className="object-cover w-48 h-48 mx-auto mb-8 transition-transform duration-300 transform rounded-full hover:scale-105"
       />
