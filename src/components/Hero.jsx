@@ -23,7 +23,7 @@ export default function Hero() {
         <button className="px-4 py-2 text-white transition-transform duration-300 transform rounded-full bg-gradient-to-r from-green-400 to-blue-500 md:inline hover:scale-105">
           <a href="#contact">Contact With Me</a>
         </button>
-        <a href="src\assets\VINITHA.pdf" download="vinitha.pdf">
+        <a href="public\VINITHA.pdf" download="vinitha.pdf">
           <button className="px-4 py-2 text-white transition-transform duration-300 transform rounded-full bg-gradient-to-r from-pink-500 to-yellow-500 md:inline hover:scale-105">
             Download Resume
           </button>
