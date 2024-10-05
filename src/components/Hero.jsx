@@ -1,7 +1,12 @@
 import React from "react";
 import Image from "../assets/image.jpg";
+import resume from "../assets/VINITHA.pdf";
+import { saveAs } from "file-saver";
 
 export default function Hero() {
+  const handleDownload = () => {
+    saveAs(resume, "vinitha.pdf");
+  };
   return (
     <div className="py-16 text-center text-white bg-black" id="hero">
       <img
@@ -23,14 +28,13 @@ export default function Hero() {
         <button className="px-4 py-2 text-white transition-transform duration-300 transform rounded-full bg-gradient-to-r from-green-400 to-blue-500 md:inline hover:scale-105">
           <a href="#contact">Contact With Me</a>
         </button>
-        <a
-          href={`${process.env.VITE_PUBLIC_URL}/VINITHA.pdf`}
-          download="VINITHA.pdf"
+
+        <button
+          onClick={handleDownload}
+          className="px-4 py-2 text-white transition-transform duration-300 transform rounded-full bg-gradient-to-r from-pink-500 to-yellow-500 md:inline hover:scale-105"
         >
-          <button className="px-4 py-2 text-white transition-transform duration-300 transform rounded-full bg-gradient-to-r from-pink-500 to-yellow-500 md:inline hover:scale-105">
-            Download Resume
-          </button>
-        </a>
+          Download Resume
+        </button>
       </div>
     </div>
   );
