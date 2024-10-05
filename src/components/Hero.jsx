@@ -24,8 +24,8 @@ export default function Hero() {
           <a href="#contact">Contact With Me</a>
         </button>
         <a
-          href="https://drive.google.com/uc?export=download&id=12SkTCNit6R1VE-6SNSthHu04DY_2Lslo"
-          download="vinitha.pdf"
+          href={`${process.env.VITE_PUBLIC_URL}/VINITHA.pdf`}
+          download="My_Resume.pdf"
         >
           <button className="px-4 py-2 text-white transition-transform duration-300 transform rounded-full bg-gradient-to-r from-pink-500 to-yellow-500 md:inline hover:scale-105">
             Download Resume
