@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "../assets/image.jpg";
 import resume from "../assets/VINITHA.pdf";
 import { saveAs } from "file-saver";
 import imagePhoto from "../assets/PHOTO.jpg";

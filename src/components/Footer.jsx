@@ -27,14 +27,14 @@ export default function Footer() {
     }
   };
   return (
-    <footer className="bg-black text-white py-8" id="footer">
-      <div className="container mx-auto px-8 md:px-16 lg:px-24">
-        <div className="flex flex-col md:flex-row md:space-x-12 items-center mb-4">
+    <footer className="py-8 text-white bg-black" id="footer">
+      <div className="container px-8 mx-auto md:px-16 lg:px-24">
+        <div className="flex flex-col items-center mb-4 md:flex-row md:space-x-12">
           <div className="flex-1 mb-4 md:mb-0">
-            <h3 className="text-2xl font-bold mb-2">Vinitha</h3>
+            {/* <h3 className="mb-2 text-2xl font-bold">Vinitha</h3>
             <p className="text-gray-400">
               Full-Stack Developer specializing in web and software development.
-            </p>
+            </p> */}
           </div>
           <div className="flex-1 w-full">
             <form
@@ -44,14 +44,12 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Your email"
-                className="w-full p-2 rounded-l-lg bg-gray-800 border border-gray-600 
-                focus:outline-none focus:border-green-400"
+                className="w-full p-2 bg-gray-800 border border-gray-600 rounded-l-lg focus:outline-none focus:border-green-400"
                 name="email"
               />
               <button
                 type="submit"
-                className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 
-                py-2 rounded-r-lg"
+                className="px-4 py-2 text-white rounded-r-lg bg-gradient-to-r from-green-400 to-blue-500"
               >
                 Subscribe
               </button>
@@ -60,13 +58,12 @@ export default function Footer() {
         </div>
 
         <div
-          className="border-t border-gray-600 pt-4 flex flex-col md:flex-row 
-          justify-between items-center"
+          className="flex flex-col items-center justify-between pt-4 border-t border-gray-600 md:flex-row"
         >
           <p className="text-gray-400">
             &copy; {new Date().getFullYear()} Vinitha. All rights reserved.
           </p>
-          <div className="flex space-x-4 my-4 md:my-0">
+          <div className="flex my-4 space-x-4 md:my-0">
             <a
               href="https://www.linkedin.com/in/vinitharam-ganesan"
               className="text-gray-400 hover:text-white"
