@@ -3,6 +3,9 @@ import ecommerceImg from "../assets/e-commerce-image.png";
 import gmailcloneImg from "../assets/gmail-clone-image.png";
 import ChatappImg from "../assets/chat-app.png";
 import FinanceappImg from "../assets/finance-app.png";
+import { motion } from "framer-motion";
+import { fadeIn } from "../variants";
+import { useInView } from "react-intersection-observer";
 
 const projects = [
   {
@@ -44,14 +47,29 @@ const projects = [
 ];
 
 export default function Projects() {
+  const [ref, inView] = useInView({
+    threshold: 0.1, // Adjust the threshold as needed
+  });
+
   return (
     <div className="py-20 text-white bg-black" id="project">
-      <div className="container px-8 mx-auto md:px-16 lg:px-24">
+      <motion.div
+        ref={ref}
+        variants={fadeIn("up", 0.2)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.5 }}
+        className="container px-8 mx-auto md:px-16 lg:px-24"
+      >
         <h2 className="mb-12 text-4xl font-bold text-center">My Projects</h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
-          {projects.map((project) => (
-            <div
+          {projects.map((project, index) => (
+            <motion.div
               key={project.id}
+              variants={fadeIn(index % 2 === 0 ? "left" : "right", 0.2)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.7 }}
               className="p-6 transition-transform duration-300 transform bg-gray-800 rounded-lg hover:shadow-lg hover:scale-105"
             >
               <div className="h-60">
@@ -103,10 +121,10 @@ export default function Projects() {
                   </a>
                 )}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
